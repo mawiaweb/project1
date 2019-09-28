@@ -1,0 +1,27 @@
+
+p{
+
+/* Content - Width and Height */
+width: 50%; /*50 % of the parent element; it's the body that the paragraph is inside of the paragraph goes halfway 
+	across the body: the body of the entire page, we end up with half the page*/ 
+
+/*Border*/
+
+border: 2px solid blue;
+
+/*Padding*/
+
+padding-left: 40px;
+
+/*Margin*/
+
+/*margin-top: 500px;
+
+margin: 100px;*/
+/*margin: 20px 40px 500px 100px;*/
+/*margin: 0 auto 0 auto; a tawi zawng in */
+/*margin: 0 auto; */
+margin: 20px 50px; /*you need the px there unless the number is zero like above*/
+
+
+}

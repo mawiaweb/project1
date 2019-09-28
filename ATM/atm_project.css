@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+html, body{
+font-family: 'Libre Baskerville', serif;
+background-color: #A9A9A9;
+text-align: center;
+min-width: 320px;
+}
+
+#main-container {
+  background-color:  rgb(211,211,211);
+  margin: 0 auto;
+  padding: 80px;
+  border-radius: 4px;
+  width: 75%;
+  max-width: 900px;
+/*  padding: 10px;
+  padding-top: 20px;*/
+  border: 2px solid silver;
+  
+}
+
+button{
+  text-align: left;
+}
+
+header {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.label{
+  display: inline-block;
+  text-align: right;
+  width: 30%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+div.comment-area{
+display: inline-block;
+position: relative;
+bottom: 20px;
+padding-top: 20px;
+}
+
+.right {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+  vertical-align: middle;
+}
+
+#submit{
+  display: inline-block;
+  width: 50%;
+}
+
+.box{
+	margin: 0 auto;
+	width: 0 auto;
+	text-align: left;
+	display:inline-block;
+}
+
+#description{
+	text-align: center;
+	font-size: 1.3em;
+	position: relative;
+	bottom: 20px;
+}
+
+.inputbox{
+  height: 20px;
+  width: 200px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#submit{
+
+}
+
+#submit, #reset {
+background-color: #757575;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 30px;
+  width: 90px;
+  border: 0px solid;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+
+}
+#center{
+  text-align:center;
+}
+
+
+
+@media (max-width: 833px){
+	.inputbox{
+		width: 80%;
+	}
+
+	select{
+		width: 90%;
+	}
+
+
+}
+
+
+@media (max-width: 520px) {
+  .label {
+    width: 100%;
+    text-align: left;
+  }
+  .right {
+    width: 80%;
+    float: left;
+  }
+  .inputbox, .box {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}

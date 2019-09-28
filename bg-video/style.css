@@ -1,0 +1,620 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.video-background{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	margin-top: 30px;
+}
+video{
+	max-width: -webkit-fill-available;
+
+}
+	
+
+@media (min-aspect-ratio: 16/9){ 
+	.video-background{
+		width: 100%;
+		height: auto;
+		
+	}
+}
+
+
+@media (max-aspect-ratio: 16/9){
+	.video-background{
+		width: auto;
+		height: 100%;
+	}
+}
+
+header{
+	background: rgba(0,0,100,0.5);
+	height: 100vh;
+}
+
+
+.msg{
+	position: relative;
+	text-align: center;
+	font-family: sans-serif;
+	color: #fff;
+	top: 150px;
+	width: 100%;
+}
+
+.msg h1{
+	font-size: 35px; 
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 5px;
+
+
+}
+
+.btn{
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: 2px;
+	margin: 5px;
+	padding: 7px 35px;
+	text-decoration: none;
+	border: none;
+  	cursor: pointer;
+	border-radius: 5px;
+	display:block;
+	background: coral;
+	outline: none;
+
+}
+
+
+  .btn1{
+	background:coral;
+	color: #fff;
+	
+}
+
+   .btn2{
+	background: purple;
+	color: #fff;
+}
+
+ .btn2:hover{
+	background: crimson;
+	transition: .5s;
+
+}
+
+
+
+
+nav {
+	background: rgba(0,0,0,.5);
+	width:auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+	clear: none;
+	float: none;
+	}
+
+
+nav ul li {
+	display:block;
+	/*border: thin #fff solid;*/
+	  
+	}
+
+
+	nav ul li a {
+	display:block;
+	text-decoration: none;
+	color: #fff;
+	padding: 11px 14px;
+	font-family: sans-serif;
+	letter-spacing: 2px;
+	display: block;
+	}
+
+
+
+li a:hover{
+	background: crimson;
+}
+
+
+
+	
+label {
+	cursor:pointer;
+	padding:.5em;
+	color: #fff;
+	}
+#menu-toggle {
+display:none;
+}
+
+#menu {
+display: none;
+}
+
+#menu-toggle:checked + #menu {
+display:block;
+}
+
+
+#who{
+	background: rgba(194, 194, 229, 0.5);
+	width: 100%;
+}
+#who .homepage{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 60px;
+}
+
+.homepage hr {
+    border-color: #e74c3c;
+    width: 160px;
+    border-bottom: 10px;
+    margin: 0 auto;
+}
+
+.homepage p{
+	padding-top: 30px;
+	padding-bottom: 60px;
+	text-align: center;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.7;
+}
+
+.homepage h2{
+	color: #e74c3c;
+	font-family: 'Arvo', courier, serif;
+	text-transform: uppercase;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+
+#get-involved{
+	background: rgba(58, 58, 175, 0.5);
+	width: 100%;
+	padding-top: 20px;
+	overflow: hidden;
+}
+
+#get-involved h2, h3{
+	padding-bottom: 30px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#get-involved .box1{
+	width: 95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	float: right;
+}
+
+.box1 p{
+	text-align: center;
+	text-align: center;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.7;
+}
+
+
+
+
+@media only screen and (min-width: 401px) and (max-width: 768px) {
+
+
+	nav {
+	background: rgba(0,0,0,.5);
+	width:100%;
+	/*padding-top: 1.5%;
+	padding-bottom: 1.5%;*/
+	/*padding-left: 2.5%;
+	padding-right: 2.5%;*/
+	clear: none;
+	float: none;
+
+	}
+
+nav:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: ".";
+     clear: both;
+     height: 0;
+     }
+	
+
+
+nav ul li {
+display: block;
+border:none;
+float: right;
+/*padding-right: 3%;*/
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-family: sans-serif;
+	letter-spacing: 2px;
+	display: block;
+}
+
+li a:hover{
+	background: crimson;
+}
+
+	
+label {
+	cursor:pointer;
+	display: none;
+	}
+
+#menu {
+display: block;
+}
+
+
+/*---------- intro text and button -----*/
+	.msg{
+	position: relative;
+	text-align: center;
+	font-family: sans-serif;
+	color: #fff;
+	top: 100px; /*200px*/
+}
+
+.msg h1{
+	font-size: 35px; /*40*/
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.btn{
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: 2px;
+	margin: 5px;
+	padding: 7px 35px;
+	text-decoration: none;
+	border: none;
+  	cursor: pointer;
+	border-radius: 5px;
+	display: inline-flex;
+	background: coral;
+	outline: none;
+
+}
+
+
+  .btn1{
+	background:coral;
+	color: #fff;
+	
+}
+
+   .btn2{
+	background: purple;
+	color: #fff;
+}
+
+ .btn2:hover{
+	background: crimson;
+	transition: .5s;
+
+}
+
+/*---------- end of intro text and button -----*/
+
+
+
+
+
+/*------ smaller deives ------------------ */
+#who{
+	background: rgba(194, 194, 229, 0.5);
+	width: 100%;
+}
+#who .homepage{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 60px;
+}
+
+.homepage hr {
+    border-color: #e74c3c;
+    width: 160px;
+    border-bottom: 10px;
+    margin: 0 auto;
+}
+
+.homepage p{
+	padding-top: 30px;
+	padding-bottom: 60px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 60px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.7;
+}
+
+.homepage h2{
+	color: #e74c3c;
+	font-family: 'Arvo', courier, serif;
+	text-transform: uppercase;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+
+#get-involved{
+	background: rgba(58, 58, 175, 0.5);
+	width: 100%;
+	padding-top: 20px;
+	overflow: hidden;
+}
+
+#get-involved h2, h3{
+	padding-bottom: 30px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#get-involved .box1{
+	width: 97%;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	float: right;
+}
+
+.box1 p{
+	text-align: center;
+	text-align: center;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.7;
+}
+
+
+}
+/*-----------end of small device ---------------- */
+
+
+
+
+@media only screen and (min-width: 769px) {
+
+nav {
+	background: rgba(0,0,0,.5);
+	width:100%;
+	clear: none;
+	float: none;
+
+	}
+
+nav:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: ".";
+     clear: both;
+     height: 0;
+
+     }
+	
+
+
+nav ul li {
+display: block;
+border:none;
+float: right;
+/*padding-right: 3%;*/
+
+}
+
+ li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 10px;
+	font-family: sans-serif;
+	letter-spacing: 2px;
+	display: block;
+	text-align: center;
+
+}
+
+
+li a:hover{
+background: crimson;
+}
+
+	
+label {
+	cursor:pointer;
+	display: none;
+	}
+
+#menu {
+display: block;
+}
+
+
+@media (min-aspect-ratio: 16/9){
+	.video-background{
+		width: 100%;
+		height: auto;
+		
+	}
+}
+
+
+@media (max-aspect-ratio: 16/9){
+	.video-background{
+		width: auto;
+		height: 100%;
+	}
+}
+
+header{
+	background: rgba(0,0,100,0.5);
+	height: 100vh;
+}
+
+
+.msg{
+	position: relative;
+	text-align: center;
+	font-family: sans-serif;
+	color: #fff;
+	top: 100px;
+	width: 100%;
+}
+
+.msg h1{
+	font-size: 50px;
+	margin-top: 130px;
+	margin-bottom: 10px;
+}
+
+
+.btn{
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: 2px;
+	margin: 5px;
+	padding: 7px 35px;
+	text-decoration: none;
+	border: none;
+  	cursor: pointer;
+	border-radius: 5px;
+	display: inline-flex;
+	background: coral;
+	outline: none;
+
+}
+
+
+  .btn1{
+	background:coral;
+	color: #fff;
+	
+}
+
+   .btn2{
+	background: purple;
+	color: #fff;
+}
+
+ .btn2:hover{
+	background: crimson;
+	transition: .5s;
+	font-size: 18.5px;
+
+}
+
+
+
+
+/*------ home page --- */
+
+#who{
+	background: rgba(194, 194, 229, 0.5);
+	width: 100%;
+}
+#who .homepage{
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding-top: 60px;
+}
+
+.homepage hr {
+    border-color: #e74c3c;
+    width: 160px;
+    border-bottom: 10px;
+    margin: 0 auto;
+}
+
+.homepage p{
+	padding-top: 30px;
+	padding-bottom: 80px;
+	text-align: center;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.7;
+}
+
+.homepage h2{
+	color: #e74c3c;
+	font-family: 'Arvo', courier, serif;
+	text-transform: uppercase;
+	font-size: 40px;
+	text-align: center;
+
+}
+
+
+#get-involved{
+	background: rgba(58, 58, 175, 0.5);
+	width: 100%;
+	padding-top: 20px;
+	overflow: hidden;
+}
+
+	 h3{
+	padding-bottom: 30px;
+	padding-top: 20px;
+	text-align: center;
+	color: #e74c3c;
+	font-weight:bold;
+	}
+
+	#get-involved h2{
+	color: #e74c3c;
+	font-family: 'Arvo', courier, serif;
+	text-transform: uppercase;
+	font-size: 30px;
+	text-align: center;
+}
+
+#get-involved .box1{
+	width: 30.3333333%;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	float: right;
+}
+
+.box1 p{
+	text-align: center;
+	text-align: center;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.7;
+}
+
+
+
+
+}

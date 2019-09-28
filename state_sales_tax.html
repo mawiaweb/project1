@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- mawia -->
+	<meta charset="UTF-8">
+	<title>State Sales Tax</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="state_tax.css" type="text/css">
+	 <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<div id="container">
+
+	<form class="form1" name="form1" method="post" action="">
+		<p>Please select a state:
+		<select name="selectState" id="selectState" onchange="salesTaxLookup()">
+			<option>Please select a state</option>
+		</select>
+		</p>
+
+
+
+	<p>The sales tax rate is: <span id="displayTaxRate" reset()></span></p>
+
+
+	<button class="button" type="reset" value="formreset" onclick="clearForm()">Reset</button>
+
+
+
+	</form>
+</div>
+
+<script>
+	var states =new Array();  // this creates array for states
+	states[0] = "Iowa";
+	states[1] = "Illinois";
+	states[2] = "Missouri";
+	states[3] = "Wisconsin";
+	states[4] = "Maryland";
+	states[5] = "Indiana";
+	states[6] = "Alabama";
+	states[7] = "Nebraska";
+
+
+	var stateSalesTax = new Array();
+	stateSalesTax[0] = "7%";
+	stateSalesTax[1] = "11%";
+	stateSalesTax[2] = "7%";
+	stateSalesTax[3] = "8%";
+	stateSalesTax[4] = "6%";
+	stateSalesTax[5] = "7%";
+	stateSalesTax[6] = "4%";
+	stateSalesTax[7] = "5.5%";
+
+	var count;
+	count = 1;
+	while(count <= 8)
+	{
+		var option = document.createElement('option');
+
+		option.text = states[count - 1];
+		document.getElementById("selectState").add(option, count); 
+
+		count++;
+	}
+
+	function salesTaxLookup(){
+		for(i = 0; i <= 7; i++){
+			var selectState = document.getElementById("selectState");
+			if(states[i] == selectState.options[selectState.selectedIndex].text){
+				displayTaxRate.innerHTML = stateSalesTax[i];
+			}
+		}
+	}
+
+
+
+	function clearForm() {
+        var pTag = (document.getElementById('displayTaxRate').innerHTML = '');
+      }
+
+	</script>
+
+</body>
+</html>

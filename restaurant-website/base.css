@@ -1,0 +1,507 @@
+@charset "UTF-8";
+/*mobile*/
+
+
+
+@font-face {
+    font-family: 'blackjackregular';
+    src: url('web_fonts/black_jack-webfont.eot');
+    src: url('web_fonts/black_jack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('web_fonts/black_jack-webfont.woff') format('woff'),
+         url('web_fonts/black_jack-webfont.ttf') format('truetype'),
+         url('web_fonts/black_jack-webfont.svg#blackjackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'colaborate-boldregular';
+    src: url('web_fonts/ColabBol-webfont.eot');
+    src: url('web_fonts/ColabBol-webfont.eot?#iefix') format('embedded-opentype'),
+         url('web_fonts/ColabBol-webfont.woff') format('woff'),
+         url('web_fonts/ColabBol-webfont.ttf') format('truetype'),
+         url('web_fonts/ColabBol-webfont.svg#colaborate-boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'colaborate-regularregular';
+    src: url('web_fonts/ColabReg-webfont.eot');
+    src: url('web_fonts/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('web_fonts/ColabReg-webfont.woff') format('woff'),
+         url('web_fonts/ColabReg-webfont.ttf') format('truetype'),
+         url('web_fonts/ColabReg-webfont.svg#colaborate-regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+body {
+	background-color:#d0ecf4;
+	font-family:"colaborate-regularregular"; sans-serif;
+	font-size: 90%;
+	}
+
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	clear: none;
+	float: none;
+}
+header {
+	background-color:rgba(252,210,202,1);
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	clear: none;
+	float: none;
+}
+	
+nav {
+	background-color:rgba(146,215,231, 1);
+	width:auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+	clear: none;
+	float: none;
+	}
+nav .noMobileNav {
+	display:none;
+
+	
+	}
+
+nav ul li {
+	display:block;
+	border: thin #fff solid;
+	
+	}
+
+
+nav ul li a {
+	display:block;
+	font-size: .825em;
+	text-decoration: none;
+	}
+	
+nav ul li a:link {
+	display: block;
+	width: 95%;
+	padding: 2.5%;
+	color:#f6e8d7;
+	}
+
+nav ul li a:hover {
+	background:#f6e8d7;
+	color: rgba(146, 215, 231, 1);
+	}
+	
+label {
+	cursor:pointer;
+	padding:.5em;
+	color: #fff;
+	}
+#menu-toggle {
+display:none;
+}
+
+#menu {
+display: none;
+}
+
+#menu-toggle:checked + #menu {
+display:block;
+}
+
+
+aside#leftSidebar	{
+	display: none;
+	background-color: #f6e8d7;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding: 2.5%;
+	clear: none;
+	float: none;
+	
+}
+
+section#main {
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding: 2.5%;
+	clear: none;
+	float: none;
+	}
+
+section#main img {
+	width: 100%;
+	}
+	
+	
+footer {
+	background-color:#fcd2ca;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding: 2.5%;
+	clear: none;
+	float: none;
+	
+	}
+footer #footerCol2 {
+	display:none;
+
+
+}
+
+
+h1,h2 {
+font-family:'blackjackregular', sans-serif;
+}
+h1 {
+font-size: 1.5em ;
+margin-bottom: .75em;
+}
+h2 {
+font-size: 1em;
+}
+p {
+font-size: .8em;
+margin-top: .3em;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 768px) {
+
+
+body {
+	background-color:#69C;
+	font-size:100%;
+	}
+#wrapper {
+	width: 95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+header {
+	background-color:rgba(252,210,202,1);
+	width:auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	clear: none;
+	float: none;
+}
+
+
+nav {
+	background-color:rgba(146,215,231, 1);
+	width:95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+
+	clear: none;
+	float: none;
+	}
+nav:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: ".";
+     clear: both;
+     height: 0;
+     }
+	
+nav .noMobileNav {
+	display:block;
+	}
+
+nav ul li {
+display: block;
+border:none;
+float: left;
+padding-right: 3%;
+}
+
+nav ul li a:hover {
+	background-color: rgba(146, 215, 231, 1);
+	color: #fff;
+	}
+	
+label {
+	cursor:pointer;
+	display: none;
+	}
+
+#menu {
+display: block;
+}
+
+
+
+	
+#contents {
+	background-color: rgba(255, 255, 255, 1);
+	width: 100%;
+	margin: auto;
+	clear: none;
+	float: none;
+}
+#contents:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: ".";
+     clear: both;
+     height: 0;
+     }
+	
+	
+aside#leftSidebar	{
+	display: block;
+	background-color: #f6e8d7;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	padding: 2.5%;
+	clear: none;
+	float: left;
+	
+}
+
+section#main {
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	padding: 2.5%;
+	clear: none;
+	float: right;
+	}
+	
+	
+footer {
+	background-color:#fcd2ca;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding: 2.5%;
+	clear: none;
+	float: none;
+	
+	}
+footer #footerCol2 {
+	display: block;
+}
+
+
+h1,h2 {
+font-family:'blackjackregular', sans-serif;
+}
+
+
+h1 {
+font-size: 1.25em ;
+}
+h2 {
+font-size: 1em;
+}
+p {
+font-size: .8em;
+}
+
+
+
+}
+
+@media only screen and (min-width: 769px) {
+body {
+	background-color:#999;
+	background-image: url(images/background2.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size:  cover;
+	-o-background-size:  cover;
+	background-size:  cover;
+	font-size:100%;
+
+	
+	
+	}
+
+#wrapper {
+	width: 95%;
+	max-width: 1024px;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+header {
+	background-color: rgba(252,210,202,0);
+	
+	}
+nav {
+	background-color:rgba(146,215,231, 1);
+	width:95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	clear: none;
+	float: none;
+	}
+nav:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: ".";
+     clear: both;
+     height: 0;
+     }
+	
+nav .noMobileNav {
+	display:block;
+	}
+
+nav ul li {
+display: block;
+border:none;
+float: left;
+padding-right: 3%;
+padding-top: 1%;
+padding-bottom: 1%;
+
+}
+
+nav ul li a:hover {
+	background-color: rgba(146, 215, 231, 1);
+	color: #fff;
+	}
+	
+	
+label {
+	cursor:pointer;
+	display: none;
+	}
+
+#menu {
+display: block;
+}
+	
+
+
+#contents {
+	background-color: rgba(255, 255, 255, .7);
+	width: 100%;
+	margin: auto;
+	clear: none;
+	float: none;
+}
+#contents:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: ".";
+     clear: both;
+     height: 0;
+     }
+	
+
+aside#leftSidebar	{
+	background-color: rgba(255, 255, 255, 0);
+	width: 25%;
+	display: block;
+	float: left;
+	
+	}
+section#main {
+	background-color: rgba(255, 255, 255, 0);
+	float:right;
+	width:60%;
+	padding-left:2%;
+	border-left: medium solid #92d7e7;
+	
+	}
+footer {
+	width:95%;
+	display: -webkit-flex;
+	display: flex;
+	background-color: rgba(252,210,202,1)
+	
+	}
+
+
+     
+footer #footerCol1 {
+	-webkit-flex:1;
+	flex:1;
+	order:3;
+	text-align:center;
+
+
+}
+
+footer #footerCol2 {
+	display:block;
+	-webkit-flex:1;
+	flex:1;
+	order:2;
+	text-align:center;
+
+}
+
+
+footer #footerCol3 {
+	-webkit-flex:1;
+	flex:1;
+	order:1;
+	text-align:center;
+
+}
+
+
+h1 {
+font-size: 1.25em ;
+}
+h2 {
+font-size: 1em;
+padding-bottom: .5em;
+padding-top: 1em;
+}
+p {
+font-size: .8em;
+}
+}
+
+
+
+
+
+
+
+

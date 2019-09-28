@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/*mobile*/
+
+
+body{
+background-color: #537d91;
+
+}
+
+#container{
+	margin: 35% auto;
+	width: 90%;
+	height: auto;
+	padding: 5%;
+	background-color: lightblue;
+	border-radius: 10px;
+
+
+}
+
+
+.button {
+  background-color: steelblue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+p{
+	font-weight: bold;
+}
+
+/*h2{
+	padding-top: -30px;
+}*/
+
+#displayTaxRate{
+	color: crimson;
+}
+
+select{
+	
+	width: 60% !important;
+}
+
+
+
+@media only screen and (min-width: 401px) and (max-width: 768px){
+	body{
+background-color: #537d91;
+
+}
+
+#container{
+	margin: 15% auto;
+	width: 90%;
+	height: auto;
+	padding: 5%;
+	background-color: lightblue;
+	border-radius: 10px;
+
+
+
+}
+
+
+.button {
+  background-color: steelblue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+p{
+	font-weight: bold;
+}
+
+h2{
+	padding-top: -50px;
+}
+
+#displayTaxRate{
+	color: crimson;
+}
+
+select{
+	
+	width: 60% !important;
+}
+
+}
+
+
+
+
+@media only screen and (min-width: 769px){
+
+body{
+background-color: #537d91;
+
+}
+
+#container{
+	margin: 10% auto;
+	width: 40%;
+	height: auto;
+	padding: 10%;
+	background-color: lightblue;
+	border-radius: 10px;
+
+
+}
+
+
+.button {
+  background-color: steelblue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+p{
+	font-weight: bold;
+}
+
+
+#displayTaxRate{
+	color: crimson;
+}
+
+select{
+	
+	width: 60% !important;
+}
+
+}

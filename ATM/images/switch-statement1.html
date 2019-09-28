@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		html, body{
+			background: url('images/snow.jpg');
+		}
+		hr{
+			margin-top: 150px;
+		}
+
+	</style>
+</head>
+<body>
+<input id="myInput" type="text">
+<button onclick="myFunction()">Button</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(){
+	var text;
+	var instructorName = document.getElementById("myInput").value;
+
+	switch(instructorName){
+		case "javaScript":
+		case "javascript":
+		text ="Your javaScript instructor will be Mawia";
+		break;
+
+		case "PHP":
+		text = "Jeff Gullion will be your PHP instructor";
+		break;
+
+		case "HTML":
+		text = "Your HTML instructor will be Robert";
+		break;
+
+		case "CSS":
+		text = "Your CSS instructor will Timothy";
+		break;
+
+		default: 
+		text = "There is no such thing";
+	}
+		document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ATM Electronic Checkbook</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="form.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+
+// Dollar format
+
+ function dollarFormat(valuein) {
+
+    var formatStr=" "
+
+    var Outdollars=" "
+
+    var decipos=valuein.indexOf(".")
+
+    if (decipos==-1) {
+      decipos=valuein.length
+    }
+    var dollars=valuein.substring(0,decipos)
+    var dollen=dollars.length
+    if (dollen>3) {
+      while (dollen>0) {
+        tDollars=dollars.substring(dollen-3,dollen)
+          if (tDollars.length==3) {
+            Outdollars=","+tDollars+Outdollars
+            dollen=dollen-3
+          }
+          else {
+            Outdollars=tDollars+Outdollars
+            dollen=0
+          }
+      }
+      if (Outdollars.substring(0,1)==".") {
+        dollars=Outdollars.substring(1,Outdollars.length)
+      }
+      else {
+        dollars=Outdollars
+      }
+    }
+    var cents=valuein.substring(decipos+1,decipos+3)
+    if (cents=="") {
+      cents="00"
+    }
+    if (cents.length == 1) {
+      cents = cents+"0"
+    }
+    var formatStr="$"+dollars+"."+cents
+
+    return formatStr
+}//end dollarFormat()
+
+
+//This function is free to use as needed.  It can process either String or number inputs
+function currency(Input) {
+   Input=eval(Input)
+   WorkNum=Math.abs((Math.round(Input*100)/100))
+   Decimal=""+WorkNum
+
+   if (Decimal.indexOf(".")==-1)
+      {Decimal+=".00"}
+   
+   strDollar=Decimal.substr(0,Decimal.indexOf("."))
+   intDollar=strDollar-0
+
+   DecimalPos=Decimal.substr(Decimal.indexOf("."))
+   
+   while (DecimalPos.length<3)
+      {DecimalPos+="0"}
+
+   if (intDollar>=1000)
+      {
+      DollarLen=strDollar.length
+      strDollar=parseInt(""+(intDollar/1000))+","+strDollar.substring(DollarLen-3,DollarLen)
+      }
+
+   if (intDollar>=1000000)
+      {
+      DollarLen=strDollar.length
+      strDollar=parseInt(""+(intDollar/1000000))+","+strDollar.substring(DollarLen-7,DollarLen)
+      }
+
+   strCurrency = strDollar + DecimalPos 
+
+   if (Input<0) {strCurrency="("+strCurrency+")"}
+   
+   return "$"+strCurrency;
+}//end currencyFormat
+
+
+//This function is free to use.  It uses a regular expression to format the value.  It requires a numeric input value to work correctly. 
+function testFormat(inNum)
+{
+	//alert("inside testFormat()");
+	if (isNaN(inNum))
+	{
+		//alert("result of isNaN" );   //The input amount is a non numeric string. It is or contains letters and/or spaces
+		return "Invalid amount"	
+	}
+	else
+	{	
+		inNum = parseFloat(inNum);		//Convert input value into a floating point number.  toFixed() requires a number value to work with
+		return  '$' + inNum.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+	}
+}//end testFormat()
+
+
+function displayTotal(inTotal)
+{
+	return inTotal;
+}
+
+function formatTotal(inTotal)
+{
+	return dollarFormat(inTotal);
+}
+
+
+// Dollar sign ends here
+
+
+var accountBalance = 0;
+function deposit(){
+	var moneyIn = document.getElementById("inAmt").value;
+	accountBalance += parseFloat(moneyIn);
+
+	// Note: var creates a global variable with a value of 0. Function deposit creates a function with a name deposit which will be called only when the user the click the button. Var moneyIn creates a local variable that will store whatever value that comes from the right. The value that is stored in the local variable is converted into a numeric by using a "parseFloat" and is stored in the container of global variable.
+
+}
+
+
+
+function Withdraw(){
+	var moneyOut = document.getElementById("inAmt").value;
+	accountBalance -= parseFloat(moneyOut);
+
+	//Note: It creates a function name "withdraw" that will be called only when a user click the button. var moneyOut creates a local variable that will store whatever value that comes from the right, and the value inside the variable container is converted into a numeric using parseFloat and is stored in the container of global variable. 
+ 
+}
+
+
+function displayBalance(){
+	document.getElementById("balance").value = dollarFormat(accountBalance +"");
+	// dollarFormat is always with () 
+	//Note: This creates a function name "displayBalance" which will be called only when a user clicks the button. The global variable with numeric values throws the values into "balance" that displays it in the browser. Dollar format adds a dollar sign infront of the numeric value being displayed in the balance. 
+ 
+}
+
+function clearForm(){
+  /*document.getElementById("balance").value.reset();*/
+  document.querySelector("form.form-container").reset();
+  accountBalance = 0;
+  
+}
+
+
+
+</script>
+
+</head>
+<body class="container-fluid bg">
+<div>
+	<div class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<!--form start-->
+			<form class="form-container" class="formbg"> 
+				<h3>ATM Project</h3>
+        
+				  <div class="form-group">
+				    <label for="numIn">Enter Amount</label>
+				    <input type="number" class="form-control" id="inAmt" placeholder="Enter Amount">
+				  </div>
+				  <div class="form-group">
+				    <label for="numB">Balance</label>
+				    <input type="balance" class="form-control" id="balance" placeholder="Balance">
+				  </div>
+				  
+				  
+				  <input type="button" class="btn btn-primary btn-block" value="Deposit" onclick="deposit()"/>
+
+				  <input type="button" class="btn btn-success btn-block" value="Withdraw" onclick="Withdraw()"/>
+
+				   <input type="button" class="btn btn-info btn-block" value="Display Balance" onclick="displayBalance()"/>
+
+				 <button type="reset" class="btn btn-warning btn-block" value="reset" onclick="clearForm()">Reset</button>
+         <!-- id="Reset"> -->
+       
+          
+
+			</form>
+			<!--form end-->
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+	</div><!--row-->
+</div><!--container-fluid-->
+
+
+
+</body>
+</html>
